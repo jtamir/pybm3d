@@ -2,7 +2,7 @@ from nose.tools import *
 import numpy as np
 import skimage.data
 
-import pybm3d
+import pybm3d.bm3d
 
 def test_bm3d():
     # stupid simple test, do we denoise at all? 

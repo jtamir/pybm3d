@@ -6,7 +6,7 @@ import scipy.misc
 import sys
 
 
-import pybm3d
+import pybm3d.bm3d
 
 
 

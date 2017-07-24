@@ -5,7 +5,7 @@ import numpy as np
 
 ext_modules = []
 ext_modules += cythonize([Extension("pybm3d.bm3d", 
-                                    sources=["pybm3d/bm3d.pyx", 
+                                    sources=["pybm3d/pybm3d.pyx", 
                                              "bm3d_src/mt19937ar.c", 
                                              "bm3d_src/io_png.c", 
                                              "bm3d_src/bm3d.cpp", 
@@ -13,7 +13,8 @@ ext_modules += cythonize([Extension("pybm3d.bm3d",
                                              "bm3d_src/utilities.cpp", 
                                          ], 
                                     language="c++", 
-                                    include_dirs = [np.get_include()],
+                                    include_dirs = [np.get_include(), "/usr/local/include", "/opt/local/include"],
+                                    library_dirs = ["/usr/local/lib", "/opt/local/lib"],
                                     libraries=["png", "fftw3", "fftw3f"])])
 
 
